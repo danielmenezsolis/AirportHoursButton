@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EAA84E13-0F56-49F4-9772-6F33C66D25EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AirportHoursButton</RootNamespace>
+    <AssemblyName>AirportHoursButton</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RightNow.AddIns.AddInViews, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\AppData\Roaming\RightNow_Technologies\iccsmx\18.5.3319.274\AddInPipeline\AddInViews\RightNow.AddIns.AddInViews.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AddIn">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\SOAPICCS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="WorkspaceRibbonAddIn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.APIAccessResponseHeaderType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.BatchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.BatchResponseItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.ConvertGenericToObjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.ConvertObjectToGenericResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.CSVTableSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.DestroyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.ExecuteMarketingFlowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.GetFileDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.GetMetaDataForClassResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.GetMetaDataForOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.GetMetaDataLastChangeTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.GetMetaDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.GetPrimaryClassNamesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.GetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.GetSubscribableObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.GetValuesForNamedIDHierarchyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.GetValuesForNamedIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.Incident.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.MetaDataClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.MetaDataClassOperation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.NamedID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.NamedIDWithParent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.QueryCSVResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.QueryObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.QueryResultData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.ResetContactPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.RNObject.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.RNObjectType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.RunAnalyticsReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.SendIncidentResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.SendMailingToContactResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.SubscribableObject.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.TransferSubObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\AirportHoursButton.SOAPICCS.UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SOAPICCS\RightNow.wsdl" />
+    <None Include="Connected Services\SOAPICCS\soap.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SOAPICCS\soap1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SOAPICCS\soap2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SOAPICCS\soap3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SOAPICCS\soap4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SOAPICCS\soap5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SOAPICCS\soap6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\AddIn16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddIn32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\SOAPICCS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SOAPICCS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SOAPICCS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SOAPICCS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airport16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airport32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "%25USERPROFILE%25\RightNowDev"
+mkdir "%25USERPROFILE%25\RightNowDev\AddIns"
+mkdir "%25USERPROFILE%25\RightNowDev\AddIns\$(ProjectName)"
+copy /Y "$(TargetDir)$(TargetName).*" "%25USERPROFILE%25\RightNowDev\AddIns\$(ProjectName)\"
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>
